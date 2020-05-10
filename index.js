@@ -1,12 +1,12 @@
-const fs = require("fs");
 const inquirer = require("inquirer");
+const fs = require("fs");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-/* const writeFileAsync = util.promisify(fs.writeFile); */
+const writeFileAsync = util.promisify(fs.writeFile);
 
-function promptUser() {
-  return inquirer.prompt([
+inquirer
+  .prompt([
     {
       type: "input",
       name: "title",
@@ -47,12 +47,11 @@ function promptUser() {
       name: "questions",
       message: "Where can you be contacted for questions about your project?",
     },
-  ]);
-}
-/* const questions = [];
+  ])
+  .then((data) => {});
 
 function writeToFile(fileName, data) {}
 
 function init() {}
 
-init(); */
+init();
