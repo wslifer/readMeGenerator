@@ -5,8 +5,8 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-inquirer
-  .prompt([
+function promptUser() {
+  return inquirer.prompt([
     {
       type: "input",
       name: "title",
@@ -47,11 +47,21 @@ inquirer
       name: "questions",
       message: "Where can you be contacted for questions about your project?",
     },
-  ])
-  .then((data) => {});
+  ]);
+}
 
-function writeToFile(fileName, data) {}
+async function init() {
+  try {
+    const data = await promptUser();
 
-function init() {}
+    const readMe = generateMarkdown(data);
+
+    await writeFileAsync("README.md", readMe);
+
+    console.log("Successfully wrote readme file!");
+  } catch (err) {
+    error.log(err);
+  }
+}
 
 init();
