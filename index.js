@@ -9,6 +9,16 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
+      name: "githubUser",
+      message: "What is your github username?",
+    },
+    {
+      type: "input",
+      name: "githubRepo",
+      message: "What is your project's repository name?",
+    },
+    {
+      type: "input",
       name: "title",
       message: "What is your project title?",
     },

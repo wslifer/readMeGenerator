@@ -1,6 +1,7 @@
 function generateMarkdown(data) {
   return `
 # ${data.title}
+<img src="https://img.shields.io/github/downloads/${githubUser}/${githubRepo}/total"/>
 ## Description 
   ${data.description}
 ## Table of Contents 
