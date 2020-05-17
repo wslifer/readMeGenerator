@@ -1,25 +1,38 @@
+# Read Me Generator
 
-# Team Profile Generator
-![Github](https://img.shields.io/github/last-commit/wslifer/team-profile-generator)
-## Description 
-  This app allows a user to organize a team by adding members from each field of work.
-## Table of Contents 
-  * [Installation](##Installation )
-  * [Usage](##Usage)
-  * [License](##License)
-  * [Contributors](##Contributors)
-  * [Test](##Test)
-  * [Contact](##Contact)
+## Description
+
+This app allows you to create a readMe file for all of your projects using prompt in the node cli.
+
+## Table of Contents
+
+- [Installation](##Installation)
+- [Usage](##Usage)
+- [License](##License)
+- [Contributors](##Contributors)
+- [Test](##Test)
+- [Contact](##Contact)
+
 ## Installation
-  Have a github account and user NPM install.
+
+You must use NPM and have a github account to install this app.
+
 ## Usage
-  This project is helpful for a manager to assemble teams to work on certain projects with one of each or several of each role.
-## License 
-  MIT
-## Contributors 
-  Wesley Slifer
-## Test 
-  The app contains test files to test if they are working using jest.
-## Contact 
-<img src="https://avatars.githubusercontent.com/wslifer" style="width: 45px; height: 45px; border-radius:100%;">
-Email: wesleyslifer@ymail.com
+
+This app is useful to create a detailed readme file without all of the hassle of formatting.
+
+## License
+
+MIT
+
+## Contributors
+
+Wesley Slifer
+
+## Test
+
+Test
+
+## Contact
+
+Use my github account.
