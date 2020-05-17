@@ -55,7 +55,7 @@ function promptUser() {
     {
       type: "input",
       name: "contact",
-      message: "Where can you be contacted for questions about your project?",
+      message: "What email can you be reached at?",
     },
   ]);
 }

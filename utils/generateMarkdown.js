@@ -1,6 +1,7 @@
 function generateMarkdown(data) {
   return `
 # ${data.title}
+![Github](https://img.shields.io/github/last-commit/${data.githubUser}/${data.githubRepo})
 ## Description 
   ${data.description}
 ## Table of Contents 
@@ -21,7 +22,8 @@ function generateMarkdown(data) {
 ## Test 
   ${data.test}
 ## Contact 
-  ${data.contact}
+<img src="https://avatars.githubusercontent.com/${data.githubUser}" style="width: 45px; height: 45px; border-radius:100%;">
+Email: ${data.contact}
 `;
 }
 
