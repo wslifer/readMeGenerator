@@ -4,28 +4,36 @@
 
 ## Description
 
-This application uses command line prompts in order to assist a user in creating a professional easy to navigate README file each and every time.
+This application's purpose is to provide users an easier way to continuously produce professional, and easy to navigate README files.
 
 ## Table of Contents
 
 - [Installation](##Installation)
-- [Contributors](##Contributors)
+- [Technologies/Languages](##Technologies/Languages)
 - [Test](##Test)
+- [Contributors](##Contributors)
 - [Contact](##Contact)
 
 ## Installation
 
 npm i
 
+## Technologies/Languages
+
+Inquirer
+
+## Test
+
+'node index.js', errors will log in command line.
+
 ## Contributors
 
 Wesley Slifer
 
-## Test
-
-run node index.js
-
 ## Contact
 
-<img src="https://avatars.githubusercontent.com/wslifer" style="width: 45px; height: 45px; border-radius:100%;">
+<img src="https://avatars.githubusercontent.com/wslifer" height='100' width='100'>
+
 Email: wesleyslifer32@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/wslifer/
