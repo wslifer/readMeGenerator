@@ -20,7 +20,7 @@ npm i
 
 ## Technologies/Languages
 
-Inquirer
+Inquirer, JavaScript
 
 ## Test
 
