@@ -1,9 +1,12 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown");
+const path = require("path");
 
+const generateMarkdown = require("./utils/generateMarkdown");
 const writeFileAsync = util.promisify(fs.writeFile);
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outPath = path.join(OUTPUT_DIR, "README.md");
 
 function promptUser() {
   return inquirer.prompt([
@@ -15,17 +18,17 @@ function promptUser() {
     {
       type: "input",
       name: "githubRepo",
-      message: "What is your project's repository name?",
+      message: "What is your application's repository name?",
     },
     {
       type: "input",
       name: "title",
-      message: "What is your project title?",
+      message: "What is your application title?",
     },
     {
       type: "input",
       name: "description",
-      message: "Provide a brief description of your project.",
+      message: "Provide a brief description of your application.",
     },
     {
       type: "input",
@@ -35,7 +38,7 @@ function promptUser() {
     {
       type: "input",
       name: "usage",
-      message: "What can your project be used for?",
+      message: "What can your application be used for?",
     },
     {
       type: "input",
@@ -45,12 +48,12 @@ function promptUser() {
     {
       type: "input",
       name: "contributing",
-      message: "Who contributed to your project?",
+      message: "Who contributed to your application?",
     },
     {
       type: "input",
       name: "test",
-      message: "How to test your project is working?",
+      message: "How to test your application is working?",
     },
     {
       type: "input",
@@ -66,9 +69,13 @@ async function init() {
 
     const readMe = generateMarkdown(data);
 
-    await writeFileAsync("README.md", readMe);
+    if (!fs.existsSync(OUTPUT_DIR)) {
+      fs.mkdirSync(OUTPUT_DIR);
+    }
 
-    console.log("Successfully wrote readme file!");
+    await writeFileAsync(outPath, readMe);
+
+    console.log("Successfully wrote README.md file!");
   } catch (err) {
     error.log(err);
   }
