@@ -32,23 +32,18 @@ function promptUser() {
     },
     {
       type: "input",
+      name: "link",
+      message: "What is the deployed link to your application?",
+    },
+    {
+      type: "input",
       name: "install",
       message: "Provide instructions for installation",
     },
     {
       type: "input",
-      name: "usage",
-      message: "What can your application be used for?",
-    },
-    {
-      type: "input",
-      name: "license",
-      message: "License Information",
-    },
-    {
-      type: "input",
-      name: "contributing",
-      message: "Who contributed to your application?",
+      name: "technologies",
+      message: "What technologies did you incorporate?",
     },
     {
       type: "input",
@@ -57,8 +52,18 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "contact",
+      name: "contributing",
+      message: "Who contributed to your application?",
+    },
+    {
+      type: "input",
+      name: "email",
       message: "What email can you be reached at?",
+    },
+    {
+      type: "input",
+      name: "linkedIn",
+      message: "What is your LinkedIn URL?",
     },
   ]);
 }

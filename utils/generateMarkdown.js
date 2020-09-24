@@ -22,7 +22,7 @@ function generateMarkdown(data) {
   ${data.contributing}
 ## Contact 
 <img src="https://avatars.githubusercontent.com/${data.githubUser}" height='90' width='90' borderRadius='100%'>
-Email: ${data.contact}
+Email: ${data.email}
 LinkedIn: ${data.linkedIn}
 `;
 }
