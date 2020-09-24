@@ -4,26 +4,26 @@ function generateMarkdown(data) {
 ![Github](https://img.shields.io/github/last-commit/${data.githubUser}/${data.githubRepo})
 ## Description 
   ${data.description}
+## Deployed Link
+  ${data.link}
 ## Table of Contents 
-  * [Installation](##Installation )
-  * [Usage](##Usage)
-  * [License](##License)
-  * [Contributors](##Contributors)
+  * [Installation](##Installation)
+  * [Technologies Used](##Technologies Used)
   * [Test](##Test)
+  * [Contributors](##Contributors)
   * [Contact](##Contact)
 ## Installation
   ${data.install}
-## Usage
-  ${data.usage}
-## License 
-  ${data.license}
-## Contributors 
-  ${data.contributing}
+##Technologies Used
+  ${data.technologies}
 ## Test 
   ${data.test}
+## Contributors 
+  ${data.contributing}
 ## Contact 
-<img src="https://avatars.githubusercontent.com/${data.githubUser}" style="width: 45px; height: 45px; border-radius:100%;">
+<img src="https://avatars.githubusercontent.com/${data.githubUser}" height='90' width='90' borderRadius='100%'>
 Email: ${data.contact}
+LinkedIn: ${data.linkedIn}
 `;
 }
 
